@@ -59,7 +59,7 @@ def get_usd_balance():
         response.raise_for_status()
         data = response.json()
         if data.get("Success"):
-            return data["Wallet"].get("USD", {}).get("Free", 0.0)
+            return data["SpotWallet"].get("USD", {}).get("Free", 0.0)
         return 0.0
     except Exception as e:
         print(f"获取美元余额失败: {e}")
