@@ -87,7 +87,7 @@ def get_time():
 def strategy_decision_time():
     current_formatted = get_time()
     current_dt = datetime.datetime.strptime(current_formatted, "%Y-%m-%d %H:%M")
-    target_hours = 0
+    target_hours = [0]
     if current_dt.minute == 0 and current_dt.hour in target_hours:
         return True
     else:
