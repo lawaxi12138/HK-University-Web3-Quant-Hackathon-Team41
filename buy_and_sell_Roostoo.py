@@ -35,7 +35,7 @@ def get_btc_balance():
         response.raise_for_status()
         data = response.json()
         if data.get("Success"):
-            return data["Wallet"].get("BTC", {}).get("Free", 0.0)
+            return data["SpotWallet"].get("BTC", {}).get("Free", 0.0)
         return 0.0
     except Exception as e:
         print(f"获取比特币余额失败: {e}")
