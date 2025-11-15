@@ -100,6 +100,7 @@ def full_btc_buy():
 
     # 计算可购买数量（扣除少量手续费预留）
     quantity = (usd_balance * 0.999) / btc_price  # 预留0.1%作为手续费缓冲
+    quantity = round(quantity, 6)
 
     # 下单
     payload = {
