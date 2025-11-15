@@ -167,4 +167,4 @@ def full_btc_sell():
 
 # 使用示例
 if __name__ == "__main__":
-    print()
+    full_btc_buy()
