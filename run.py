@@ -2,6 +2,7 @@ from final import *
 import get_data_HORUS
 import get_date_Roostoo
 import buy_and_sell_Roostoo
+import time
 
 strategy = 'MOM'
 position = 0
@@ -19,8 +20,10 @@ while True:
 
         if position == 0:
             buy_and_sell_Roostoo.full_btc_sell()
+            time.sleep(600)
         else:
             buy_and_sell_Roostoo.full_btc_buy()
+            time.sleep(600)
 
     current_time = time.localtime()
     current_hour = current_time.tm_hour  # 当前小时（0-23）
